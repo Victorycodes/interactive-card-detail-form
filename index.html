@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- Card Display -->
+    <div class="wrapper-flex">
+      <div class="wrapper-banner">
+        <div class="wrapper-banner-group">
+          <div class="wrapper-banner-card1">
+            <div class="wrapper-banner-card1-logo">
+              <div id="cardNumber" class="wrapper-banner-card1-number">
+                0000 0000 0000 0000
+              </div>
+
+            </div>
+            <div class="wrapper-banner-card1-details">
+              <div id="cardName" class="wrapper-banner-card1-details-name">
+                JANE APPLESSED
+              </div>
+              <div id="cardExp" class="wrapper-banner-card1-details-exp">
+                <span id="cardMon">00</span>/
+                <span id="cardYear">00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper-banner-group">
+          <div class="wrapper-banner-card2">
+            <div id="cardCvc" class="wrapper-banner-card2-cvc">
+              000
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper-content">
+
+        <!-- Card form -->
+        <div id="formBox" class="wrapper-content-form">
+          <div class="wrapper-content-form-inputs">
+            <label for="card-name" class="card-label">Cardholder Name</label>
+            <input type="text" placeholder="e.g. Jane Appleseed" class="wrapper-content-form-inputs-input"
+              id="card-name" name="card-name">
+            <p class="message3"></p>
+          </div>
+
+          <div class="wrapper-content-form-inputs">
+            <label for="card-number" class="cardnumber-label">Card Number</label>
+
+            <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="wrapper-content-form-inputs-input"
+              id="card-number" name="card-number" min="0000000000000000" max="9999999999999999">
+            <p class="message2"></p>
+          </div>
+
+          <div class="wrapper-content-form-inputs-row">
+            <div class="wrapper-content-form-inputs">
+              <div class="wrapper-content-form-inputs-exp">
+                <label for="card-month">Exp. Date</label>
+                <label for="card-year">(YY/MM)</label><br>
+                <input type="month" placeholder="MM" class="wrapper-content-form-inputs-input" id="card-month"
+                  name="card-month">
+                <p class="message"></p>
+              </div><br>
+            </div>
+            <div class="wrapper-content-form-inputs">
+              <label for="card-cvc" class="cardnumber-label">cvc</label>
+              <input type="number" placeholder="e.g. 123" class="wrapper-content-form-inputs-input" id="card-cvc" min="000" max="999">
+              <p class="message1"></p>
+            </div>
+          </div>
+          <button id="formSubmitBtn" type="submit">Confirm</button>
+        </div>
+      </div>
+
+
+      <!-- Completed state start -->
+
+      <!-- Thamk you message -->
+      <div id="thanksBox" class="wrapper-content-thanks hidden">
+        <div class="wrapper-content-thanks-group">
+          <div class="wrapper-content-thanks-img">
+            <img src="/images/icon-complete.svg" alt="">
+          </div>
+
+          <div class="wrapper-content-thanks-title lg:text-2xl uppercase font-semibold text-4xl">Thank you!</div>
+          <div class="wrapper-content-thanks-desc">We've added your card details</div>
+
+          <button class="wrapper-content-thanks-btn" id="contBtn">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
